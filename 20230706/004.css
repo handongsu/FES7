@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'MYYeongnamnu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    text-align: center;
+    background-color: #eee;
+    border-radius: 20px;
+    border: 2px solid black;
+    display: flex;
+    padding: 50px;
+}
+
+.container-box {
+    display: block;
+    text-align: center;
+}
+
+.title {
+    font-family: 'MYYeongnamnu';
+    margin-top: 0px;
+}
+
+.content {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    font-size: 20px;
+    margin-left: 50px;
+    transition: all 0.5s;
+    color: #eee;
+}
+
+.content:hover {
+    color: black;
+}
+
+
+.image:hover {
+    animation-name: shake;
+    animation-duration: 1s;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
