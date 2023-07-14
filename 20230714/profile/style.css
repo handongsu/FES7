@@ -1,0 +1,78 @@
+h1, h2 ,p, ul {
+    margin: initial;
+    padding: unset;
+}
+
+li {
+    list-style-type: none;
+}
+
+body{
+    background-image: url(images/background.gif);
+    background: cover;
+}
+
+.wrapper {
+    background-color: #f4f4f4;
+    width: 800px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.header {
+    background-image: url(images/cover.png);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+}
+
+img {
+    margin: 0 auto; /* 이미지가 처음에 display: inline 이여서 block으로 바꿔줘야 margin:auto가 먹는다 */
+    display: block;
+}
+
+.header h1,p {
+    width: fit-content; /*content 크기만큼 딱 맞춘다.*/
+    /* text-align: center; */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header p {
+    border-top: 4px solid white;
+    width: fit-content;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    background-image: url(images/icon-information.png);
+    background-repeat: no-repeat;
+    background-position: right 30px center;   /*오른쪽에서 30px*/
+}
+
+.section.skill{
+    background-image: url(images/icon-skills.png);
+}
+
+.section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: salmon;
+}
+
+.list li {
+    border-left: 5px solid #ddd;
+    padding-left: 5px;
+}
+
+.footer{
+    text-align: center;
+    padding: 10px 0;
+    background-color: white;
+}
