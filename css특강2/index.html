@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .wrapper {
+            box-shadow: inset 0 0 20px red;
+            width: 800px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .wrapper a {
+            /* background-color: orangered; */
+            display: inline-block;
+
+            /* 너비는 박스너비의 개념이지만 inline은 길이 개념이라 먹히지않는다. 여기서 inline-block 을 주면 block개념이 주어지며 너비와 높이 가 적용된다. 
+            block을 주면 세로로 정렬되지만 가로로 주고싶으면 inline block을 준다. 바깥 관점에선 inline이고 안쪽 관점에선 block 여기서 가운데 정렬을 하려면 바깥 관점에서는 inline세상이니까 부모에게 text-align: center를 주면 텍스트 관점이라 가운데 정렬이 된다. 
+            inline에 베이스라인은 텍스트 기준인데 글씨가 없으면 기준을 잡을 베이스라인이 없어서 내부 맨아래 쪽과 기준을 맞춘다 (내부 text에 의존적)
+            vertical-align은 기준점을 직접 만들 수 있다.
+            */
+            width: 200px;
+            height: 200px;
+
+
+            /* margin: 20px;
+            인라인 이라 안먹힘
+            padding: 20px;
+             먹히지만 실제 공간 차지 X  */
+
+            line-height: 100px;
+            /* line-height가 기본은 normal인데 폰트에 따라 달라진다. text를 세로 센터로 맞추려면 line-height를 컨텐츠 높이만큼 맞춘다. */
+
+            vertical-align: bottom;
+            /* 자기네들 끼리의 정렬 bottom은 본인들의 차지하는 공간의 아래부분 */
+        }
+
+        .fruit {
+            background-color: gold;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            border-radius: 50%;
+        }
+
+        /* .wrapper a.silver {
+            background-color: silver;
+        }
+
+        .wrapper a.gold {
+            background-color: gold;
+            height: 400px;
+            line-height: 200px;
+        }
+
+        .wrapper a.bronze {
+            background-color: burlywood;
+            height: 100px;
+        } */
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="" class="fruit lemon">LEMON</a>
+        <a href="" class="fruit orange">ORANGE</a>
+        <a href="" class="fruit jamong">JAMONG</a>
+    </div>
+</body>
+
+</html>

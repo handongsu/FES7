@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexing</title>
+    <style>
+        body {
+            background-color: brown;
+        }
+
+        .playground {
+            border: 10px solid maroon;
+            width: 980px;
+            /* 높이가 지정되지 않아 auto로 되어있어 자식들의 높이값을 받는다. */
+            margin: 0 auto;
+            border-radius: 20px;
+            background-color: skyblue;
+            display: flex;
+
+            /* inline 애들이 flex가 되면 block이 된다. block 이지만 초기값 flex-basis:auto 덕분에 텍스트 크기만큼 너비가 잡힌다.*/
+        }
+
+        .frog {
+            background-color: mediumseagreen;
+            color: lime;
+            font-size: 40px;
+            margin: 10px;
+            border: 6px solid green;
+            border-radius: 10px;
+
+            /* flex-basis: auto; */
+            /* 안써도 기본값 */
+
+            /* flex-basis: 200px; */
+            /* 방사이즈 정함 */
+
+            /* flex-grow: 1; */
+            /* 사용가능한 공간을 크기로 쓰겠다 1:1:1 비율로 (margin:auto는 공간을 여백으로 // basis 넓이 제외한 너비) */
+
+            /* flex-shrink: 1; */
+            /* 고통분담 1:1:1:1..로 같이 줄어든다. 유연함 */
+
+            /* min-width: auto; */
+            /* 기본값이며 자식크기로 부모크기 결정 */
+
+            flex-basis: auto;
+            width: 100px;
+            /* auto -> 100px 가져감 */
+
+            flex-basis: 100px;
+            /* 크기를 basis로 정하면 min-width를 고민해봐야 한다... */
+            min-width: auto;
+
+            min-width: auto;
+            /* 자신의 컨텐츠 크기만큼만 */
+        }
+
+        .frog.covid {
+            background-color: orangered;
+            /* 코비드 개구리 왼쪽기준에서 여백을 쓰겠다.  */
+            margin-left: auto;
+            /* 옆에공간이 여백으로 되고 covid가 여백을 다 몰빵하겠다. 공간을 다 왼쪽으로 몰빵 */
+            /* margin: 10px auto;  양쪽 여백 반반몰빵(?) */
+        }
+
+        /* .frog:first-child {
+            margin-left: auto;
+        }
+
+        .frog:last-child {
+            margin-right: auto;
+            가운데 몰아서 정렬
+        } */
+
+        /* .frog.sun {
+            flex-shrink: 0;
+            수축 가능성 0이라 basis의 200px 확보 나머지 애들 더 줄어듬
+        }
+
+        .frog.cry {
+            flex-shrink: 200;
+            가장 큰 비율로 줄어듬 (상황이 괜찮으면 상관없음)
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="playground">
+        <!-- <div class="frog cry"><img src="images/frog.png" alt=""></div>
+        <div class="frog"><img src="images/frog.png" alt=""></div>
+        <div class="frog"><img src="images/frog.png" alt=""></div>
+        <div class="frog"><img src="images/frog-dj.png" alt=""></div>
+        <div class="frog sun"><img src="images/frog-disco.png"></div> -->
+        <div class="frog">Frog</div>
+        <div class="frog">Frog</div>
+        <div class="frog">Frog</div>
+    </div>
+
+</body>
+
+</html>

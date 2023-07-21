@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            box-shadow: inset 0 0 20px red;
+            width: 600px;
+            margin: 100px auto;
+            display: flex;
+            /* basis : auto 때문에 컨텐츠 크기만큼 차지한다 */
+        }
+
+        .sidebar {
+            box-shadow: inset 0 0 20px blue;
+
+            /* flex-basis: 120px; */
+            /* width: 200px; 너비를 주어지면 basis 가 너비값을 가져온다 */
+
+            padding: 10px;
+
+            width: 200px;
+            min-width: auto;
+            /* 안에있는 내용물의 크기 */
+            flex-shrink: 0;
+            /* 초기값이 1이여서 작아질 수 있는 가능성이 있다. 옆에 친구가 크기가 커지면서 줄어드는 피해가 생긴다. 그래서 이 부분을 0으로 주면서 작아질 수 없게끔 해준다. */
+        }
+
+        .main {
+            box-shadow: inset 0 0 20px orangered;
+            flex-basis: auto;
+            flex-grow: 1;
+            /*여백을 크기로*/
+            padding: 10px;
+            min-width: 0;
+            /* 삐져나갔던 크기가 돌아온다? 갖춰야 할 크기가 없어져서*/
+        }
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">sidebarsidebarsidebar</div>
+        <div class="main">MainMainMainMainMainMainMainMainMainMainMainMain</div>
+    </div>
+</body>
+
+</html>
