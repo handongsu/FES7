@@ -250,25 +250,3 @@ body {
   }
 }
 
-@keyframes leftHand {
-  0% {
-    top: 320px;
-      left: 18%;
-      transform: rotate(30deg);
-  }
-
-  100%{
-    transform: rotate(220deg) translateX(60px);
-  }
-}
-@keyframes rightHand {
-  0% {
-    top: 320px;
-      right: 18%;
-      transform: rotate(-220deg);
-  }
-
-  100%{
-    transform: rotate(-420deg) translateX(60px);
-  }
-}
