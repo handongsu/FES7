@@ -1,0 +1,274 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #bdd4e7;
+    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+    
+}
+
+.pochita {
+    position: relative;
+    margin: 140px auto;
+    margin-left: 700px;
+    width: 500px;
+    height: 600px;
+    animation: moving 2s ease infinite alternate;
+}
+
+
+/* 얼굴 */
+.pochita .face {
+    position: absolute;
+    bottom: 0;
+    width: 550px;
+    height: 580px;
+    border: 3px solid #000;
+    border-radius: 48%;
+    background: rgb(241, 112, 65);
+    
+}
+
+/* 손잡이 */
+ .handle{
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    width: 280px;
+    height: 150px;
+    border: 40px solid #000;
+    border-radius: 20px;
+    transform: translate(40%, -110%);
+} 
+
+/* 톱날 */
+.saw img {
+  position: absolute;
+  width: 30px;
+  height: 210px;
+  top: -10px;
+  left: 257px;
+  z-index: 100;
+}
+
+/* 눈 */
+.pochita .eye {
+    position: absolute;
+    top: 120px;
+    width: 95px;
+    height: 100px;
+    border-radius: 100%;
+    background: #fff;
+    z-index: 100;
+  }
+
+  .pochita .eye.left {
+    left: 105px;
+    animation: eyeLeftMoving 2s ease infinite alternate;
+  }
+  
+  .pochita .eye.right {
+    right: 105px;
+    animation: eyeRightMoving 2s ease infinite alternate;
+  }
+
+.pochita .pupil{
+    position: absolute;
+    top: 135px;
+    width: 65px;
+    height: 68px;
+    border-radius: 100px;
+    background-color: #000;
+    z-index: 200;
+}
+.pochita .pupil.left {
+    left: 130px;
+    animation: pupilLeftMoving 2s ease infinite alternate;
+  }
+
+ .pochita .pupil.right {
+    right: 130px;
+    animation: pupilRightMoving 2s ease infinite alternate;
+  }
+
+  .pochita .mouth img {
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    top: 224px;
+    left: 37%;
+     margin-left: -16px;
+  }
+
+  /* 손 */
+
+  .pochita .hand{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 0% 100% 100% 0% / 0% 100% 100% 0%;
+    border: 1px solid;
+    border-color: black black black rgb(241, 112, 65);
+    background-color: rgb(241, 112, 65);
+  }
+
+  .pochita .hand.left {
+    top: 320px;
+    left: 18%;
+    transform: rotate(30deg);
+    /* animation: leftHand 2s ease infinite alternate; */
+  }
+
+
+  .pochita .hand.right{
+    top: 320px;
+    right: 18%;
+    transform: rotate(-220deg);
+    /* animation: rightHand 2s ease infinite alternate; */
+  }
+
+  /* 다리 */
+  .pochita .leg {
+    position: absolute;
+      width: 90px;
+      height: 90px;
+      border-radius: 0% 100% 100% 0% / 0% 100% 100% 0%;
+      border: 1px solid;
+      border-color: black black black rgb(241, 112, 65);
+      background-color: rgb(241, 112, 65);
+  }
+
+  .pochita .leg.left{
+    top: 510px;
+    left: 22%;
+    transform: rotate(90deg);
+    z-index: -1;
+    
+  }
+  .pochita .leg.right{
+    top: 510px;
+    right: 22%;
+    transform: rotate(90deg);
+    z-index: -1;
+  }
+  
+@keyframes moving {
+  0% {
+    transform: translate(-50%) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: translate(-50%) rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%) rotate(-10deg) scale(1);
+  }
+
+  80% {
+    transform: translate(-50%) rotate(10deg) scale(1);
+  }
+
+  to {
+    transform: translate(-50%) rotate(-20deg) scale(1.2);
+  }
+}
+
+
+@keyframes eyeLeftMoving {
+  80% {
+    width: 95px;
+    height: 100px;
+    border-radius: 50%;
+    transform: scale(1);
+  }
+
+  100% {
+    width: 95px;
+    height: 50px;
+    border-radius: 0 0 100px 100px;
+    transform: rotate(16deg) translateY(10%);
+  }
+}
+
+@keyframes eyeRightMoving {
+  80% {
+    width: 95px;
+    height: 100px;
+    border-radius: 50%;
+    transform: scale(1);
+  }
+
+  100% {
+    width: 95px;
+    height: 50px;
+    border-radius: 0 0 50px 50px;
+    transform: rotate(-16deg) translateY(10%);
+  }
+}
+
+
+
+
+@keyframes pupilLeftMoving {
+  80% {
+    width: 65px;
+      height: 68px;
+    border-radius: 50%;
+    transform: scale(1);
+  }
+
+  100% {
+  width: 65px;
+    height: 40px;
+    top: 123px;
+    left: 133px;
+    border-radius: 0 0 100px 100px;
+    transform: rotate(16deg) translateY(10%);
+  }
+}
+
+@keyframes pupilRightMoving {
+  80% {
+    width: 65px;
+      height: 68px;
+    border-radius: 50%;
+    transform: scale(1);
+  }
+
+
+  100% {
+    width: 65px;
+      height: 40px;
+      top: 123px;
+      right: 133px;
+    border-radius: 0 0 50px 50px;
+    transform: rotate(-16deg) translateY(10%);
+  }
+}
+
+@keyframes leftHand {
+  0% {
+    top: 320px;
+      left: 18%;
+      transform: rotate(30deg);
+  }
+
+  100%{
+    transform: rotate(220deg) translateX(60px);
+  }
+}
+@keyframes rightHand {
+  0% {
+    top: 320px;
+      right: 18%;
+      transform: rotate(-220deg);
+  }
+
+  100%{
+    transform: rotate(-420deg) translateX(60px);
+  }
+}
