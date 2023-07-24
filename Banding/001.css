@@ -1,0 +1,292 @@
+body,
+h1,
+h2,
+p,
+ul,
+button {
+    padding: 0;
+    margin: 0;
+}
+
+button:enabled {
+    cursor: pointer;
+    font: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+input {
+    font: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+div,input {
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 100vh;
+    background-color: #EAE8FE;
+}
+
+.logo {
+    width: 386px;
+    height: 164px;
+    flex-shrink: 0;
+    display: block; /* 가운데 정렬: img는 inline요소 이기 때문에 block 요소로 바꿔야 margin: auto 사용 */
+    margin: auto;   /* 가운데 자동 정렬 */
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 67px;
+}
+
+/* section */
+.section {
+    width: 360px;
+}
+.sec1{
+    height: 545px;
+    background-color: #fff;
+    margin-right: 9px;
+    position: relative;
+}
+.sec2{
+    height: 50px;
+    background-color: #fff;
+    width: 360px;
+    margin-bottom: 20px;
+}
+
+.sec2 .price{
+    height: 32px;
+}
+.sec3{
+    height: 474px;
+    width: 360px;
+    background-color: #fff;
+}
+
+/* 소지금css */
+.price{
+    /* width: 306px;
+    height: 32px; */
+    margin: 9px 27px;
+    background-color: #EAE8FE;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.price.balance{
+    width: 200px;
+    height: 33px;
+    margin: 20px 12px 11px 27px;
+}
+
+.balanceBox{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.price h2 {
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 9px;
+}
+
+.price p {
+        font-family: 'Noto Sans KR';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-right: 9px;
+}
+
+.sec2 .price p {
+    font-weight: 700;
+}
+
+/*콜라 자판 css*/
+.콜라자판들 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 12px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 32px;
+    margin-right: 27px;
+    margin-left: 27px;
+}
+
+.sec1 .콜라자판 {
+    width: 94px;
+    height: 130px;
+    border-radius: 10px;
+    border: 3px solid #6327FE;
+    text-align: center;
+    padding-top: 11px;
+}
+
+.cola {
+    width: 36px;
+    height: 65px;
+    flex-shrink: 0;
+}
+
+.콜라자판 p{
+    font-family: 'Noto Sans KR';
+    font-size: 9px;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    margin-bottom: 6px;
+}
+
+.콜라자판 div {
+    width: 70px;
+    height: 22px;
+    border-radius: 50px;
+    background-color: #6327FE;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Noto Sans KR';
+    font-weight: 500;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+/* 
+.콜라자판들 .soldOut{
+    background-color: rgba(0,0,0,0.8);
+} */
+
+/*입금액 input*/
+
+.priceInput{
+    display: flex;
+    justify-content: center;
+}
+.priceInput .input{
+    width: 200px;
+    height: 33px;
+}
+.btn{
+    width: 94px;
+    height: 32px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 9px;
+}
+.btn-balance{
+    font-family: 'Noto Sans KR';
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-right: 27px;
+}
+
+/* 콜라 리스트 */
+.colaList{
+    display: flex;
+    align-items: center;
+    
+}
+
+.colaList ul{
+    width: 200px;
+    height: 134px;
+    background: #EAE8FE;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin: 11px 12px 0 27px;
+}
+.colaList li{
+    width: 170px;
+    height: 46px;
+    background-color: #fff;
+}
+.colaList li img {
+    width: 18px;
+    height: 33px;
+}
+
+.colaList li span {
+font-size: 9px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #333;
+    margin: 18px auto;
+}
+
+.colaList li strong {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+}
+.colaList .btn-get{
+    width: 94px;
+        height: 106px;
+        background-color: #6327FE;
+        color: #FFF;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+}
+
+.sec3 h2{
+    color: #000;
+        text-align: center;
+        font-family: 'Noto Sans KR';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 25px;
+}
+
+.sec3 .획득한음료{
+    background-color: #EAE8FE;
+    width: 270px;
+    height: 364px;
+    margin: 13px 27px 52px 27px;
+}
+.획득한음료 li{
+    background-color: #fff;
+    width: 276px;
+    height: 46px;
+    /* margin: 12px; */
+    margin-right: 18px;
+}
+.획득한음료 li img{
+    width: 18px;
+    height: 33px;
+    margin-top: 6px;
+    margin-left: 10px;
+}
